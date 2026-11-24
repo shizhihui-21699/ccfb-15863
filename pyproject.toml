@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nbshield"
+version = "0.1.0"
+description = "Notebook import firewall: static detection and sanitization of active content in untrusted Jupyter notebooks"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "nbshield" }]
+dependencies = []
+
+[project.scripts]
+nbshield = "nbshield.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nbshield*"]
+
+[tool.setuptools.package-data]
+nbshield = ["py.typed"]
